@@ -2,8 +2,11 @@
 The dcpy Lua (5.1) library is a library containing functions for customizable deep copying of tables. A table of 3 functions is returned when requiring this file.
 
 ---
+
 * **`basic( t )`**
+
 This function is a basic deep copy. The original metatables are applied to values and keys remain their originals whilst values are recursively deep copied. This function is defined as
+
 ```Lua
 basic = create{
 	["recursive"] = true,
@@ -12,9 +15,13 @@ basic = create{
 	["incmts"] = false
 }
 ```
+
 ---
+
 * **`shallow( t )`**
+
 This function is a basic shallow copy. The original metatable is not applied to values and keys remain their originals whilst values are non-recursively copied. This function is defined as
+
 ```Lua
 shallow = create{
 	["recursive"] = false,
@@ -24,7 +31,9 @@ shallow = create{
 }
 ```
 ---
+
 * **`create( t )`**
+
 This function creates and returns copying functions. The input table **`t`** determines what copy function is returned. All fields are treated as booleans. The format for the input table is as follows:
 
 |Key|Description|
