@@ -106,22 +106,22 @@ function dpcy.create(t)
 		if t.copymnts then
 			if t.inckeys then
 				if t.incmnts then
-					--return 
+					return internals[false][true][true][true]
 				else
-					
+					return internals[false][true][true][false]
 				end
 			else
 				if t.incmnts then
-					
+					return internals[false][true][false][true]
 				else
-					
+					return internals[false][true][false][false]
 				end
 			end
 		else
 			if t.inckeys then
-				
+				return internals[false][false][true]
 			else
-
+				return internals[false][false][false]
 			end
 		end
 	end
